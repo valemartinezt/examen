@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <html>
+        <head>
+            <title>TODO supply a title</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+            <div class="container">
+                <form th:object="${conciertos}"
+                      th:action="@{/save}"
+                      method="POST">
+
+                  
+                    <div> 
+                        <label for="apellido1">Artista Asociado</label>
+                        <input type="text" th:field="*{Artista_asociado}">
+                    </div>
+                    <div> 
+                        <label for="apellido2">Costo del evento</label>
+                        <input type="text" th:field="*{costo_evento}">
+                    </div>
+                    <div> 
+                        <label for="email">Fecha</label>
+                        <input type="text" th:field="*{fecha}">
+                    </div>
+                    <div> 
+                        <label for="email">Capacidad Maxima</label>
+                        <input type="text" th:field="*{capacidad}">
+                    </div>
+                    <div> 
+                        <label for="email">Lugar</label>
+                        <input type="text" th:field="*{lugar}">
+                    </div>
+                    
+                    <button type="submit" value="Guardar">Submit</button>
+                    
+
+                </form>
+
+            </div>
+    </body>
+</html>
